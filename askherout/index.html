@@ -18,11 +18,74 @@
   <meta name="twitter:title" content="Will You Be My Valentine? – Meme Proposal 💘" />
   <meta name="twitter:description" content="Click 'No' and get a surprise. Try this cute Valentine's website! Free, funny, and very desi." />
   <meta name="twitter:image" content="https://bemycharm.github.io/askherout/images/valentine_img.png" />
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="keywords" content="valentine, proposal, love, romance, be my valentine, valentine's day, dating, relationship, cute, funny, interactive, meme, website, free, online" />
+  <meta name="author" content="BeMyCharmm" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="1 days" />
+  
+  <!-- Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Will You Be My Valentine? Proposal Website",
+    "description": "Cute and romantic Valentine's Day proposal website! Interactive Valentine's Day proposal with animated GIFs and engaging user experience.",
+    "url": "https://bemycharm.github.io/askherout/",
+    "image": "https://bemycharm.github.io/askherout/images/valentine_img.png",
+    "creator": {
+      "@type": "Organization",
+      "name": "BeMyCharmm",
+      "url": "https://bemycharm.github.io/"
+    },
+    "datePublished": "2025-02-02",
+    "dateModified": "2026-02-02",
+    "inLanguage": "en",
+    "isFamilyFriendly": true,
+    "mainEntity": {
+      "@type": "Question",
+      "name": "Will you be my Valentine?",
+      "text": "Will you be my Valentine?",
+      "answerCount": 2,
+      "suggestedAnswer": [
+        {
+          "@type": "Answer",
+          "text": "Yes",
+          "author": {
+            "@type": "Person",
+            "name": "User"
+          }
+        },
+        {
+          "@type": "Answer", 
+          "text": "No",
+          "author": {
+            "@type": "Person",
+            "name": "User"
+          }
+        }
+      ]
+    },
+    "about": {
+      "@type": "Thing",
+      "name": "Valentine's Day",
+      "description": "Romantic holiday celebrated on February 14th"
+    },
+    "potentialAction": {
+      "@type": "InteractAction",
+      "target": "https://bemycharm.github.io/askherout/",
+      "name": "Interactive Valentine Proposal"
+    }
+  }
+  </script>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .gradient-background {
       background: #FFB6C1;
       background: linear-gradient(180deg, #FFB6C1 0%, rgba(255, 255, 255, 1) 100%);
+      min-height: 100vh;
     }
 
     .bounce2 {
@@ -40,71 +103,249 @@
         transform: translateY(-10px);
       }
     }
+    
+    /* Screen reader only content */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    /* Enhanced responsive design */
+    @media (max-width: 768px) {
+      .valentine-proposal {
+        padding: 1rem;
+      }
+      
+      #valentineQuestion {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+      }
+      
+      #responseButtons {
+        gap: 0.75rem;
+        padding-top: 1rem;
+      }
+      
+      button {
+        min-height: 3rem;
+        font-size: 1rem !important;
+        padding: 0.75rem 1rem;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      #imageDisplay {
+        height: 250px;
+      }
+      
+      #valentineQuestion {
+        font-size: 1.5rem;
+      }
+      
+      #responseButtons {
+        flex-direction: column;
+        width: 100%;
+        max-width: 200px;
+      }
+      
+      button {
+        width: 100%;
+      }
+    }
+    
+    /* Enhanced focus states */
+    button:focus {
+      outline: 2px solid currentColor;
+      outline-offset: 2px;
+    }
+    
+    /* High contrast mode support */
+    @media (prefers-contrast: high) {
+      .gradient-background {
+        background: #000;
+        color: #fff;
+      }
+    }
+    
+    /* Reduced motion support */
+    @media (prefers-reduced-motion: reduce) {
+      .bounce2 {
+        animation: none;
+      }
+    }
   </style>
 </head>
 <body class="gradient-background">
-  <div class="flex items-center justify-center h-screen">
-    <div class="flex flex-col items-center p-4">
-      <h1 class="text-2xl font-bold text-[#BD1E59] mb-2 text-center hidden">Will You Be My Valentine? Proposal Website by BeMyCharmm</h1>
-      <img id="imageDisplay" src="./images/image1.gif" alt="Cute kitten with flowers" class="rounded-md h-[300px]" style="object-fit: cover;" />
-      <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#bd1e59] my-4">Will you be my Valentine?</h2>
-      <div class="flex gap-4 pt-[20px] items-center" id="responseButtons">
-        <button id="yesButton"
-          class="bounce2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-green-400 min-h-12 min-w-[75px] px-4 py-2 bg-green-500 text-white transition">
-          Yes
-        </button>
-        <button id="noButton"
-          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium transition disabled:pointer-events-none disabled:opacity-50 hover:bg-red-700 h-12 min-w-[75px] w-auto px-4 py-2 bg-red-500 text-white">
-          No
-        </button>
-      </div>
-    </div>
-  </div>
+  <main class="flex items-center justify-center min-h-screen p-4">
+    <section class="flex flex-col items-center max-w-2xl mx-auto text-center" role="main">
+      <header>
+        <h1 class="text-2xl font-bold text-[#BD1E59] mb-2 hidden">Will You Be My Valentine? Proposal Website by BeMyCharmm</h1>
+      </header>
+      
+      <article class="valentine-proposal">
+        <figure>
+          <img id="imageDisplay" 
+               src="./images/image1.gif" 
+               alt="Cute animated Valentine proposal GIF with romantic theme" 
+               class="rounded-md h-[300px] md:h-[400px] w-full max-w-md object-cover shadow-lg" 
+               role="img" />
+        </figure>
+        
+        <h2 id="valentineQuestion" 
+            class="text-3xl md:text-4xl font-bold italic text-[#bd1e59] my-4 md:my-6" 
+            role="heading" 
+            aria-live="polite">
+          Will you be my Valentine?
+        </h2>
+        
+        <nav class="flex gap-4 pt-[20px] items-center justify-center flex-wrap" 
+             id="responseButtons" 
+             role="navigation" 
+             aria-label="Valentine response options">
+          <button id="yesButton"
+                  class="bounce2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-[16px] md:text-[20px] font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-green-400 min-h-12 min-w-[75px] px-4 py-2 bg-green-500 text-white transition focus:outline-none focus:ring-4 focus:ring-green-300"
+                  aria-label="Say yes to Valentine proposal">
+            Yes
+          </button>
+          <button id="noButton"
+                  class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-[16px] md:text-[20px] font-medium transition disabled:pointer-events-none disabled:opacity-50 hover:bg-red-700 h-12 min-w-[75px] w-auto px-4 py-2 bg-red-500 text-white focus:outline-none focus:ring-4 focus:ring-red-300"
+                  aria-label="Say no to Valentine proposal">
+            No
+          </button>
+        </nav>
+      </article>
+    </section>
+  </main>
 
   <script type="module">
     import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+    
+    // DOM Elements
     const yesButton = document.getElementById('yesButton');
     const noButton = document.getElementById('noButton');
     const imageDisplay = document.getElementById('imageDisplay');
     const valentineQuestion = document.getElementById('valentineQuestion');
     const responseButtons = document.getElementById('responseButtons');
   
+    // State management
     let noClickCount = 0;
     let buttonHeight = 48; // Starting height in pixels
     let buttonWidth = 80;
     let fontSize = 20; // Starting font size in pixels
-    const imagePaths = [
-      "./images/image1.gif",
-      "./images/image2.gif",
-      "./images/image3.gif",
-      "./images/image4.gif",
-      "./images/image5.gif",
-      "./images/image6.gif",
-      "./images/image7.gif"
+    
+    // Image paths with alt text for accessibility
+    const imageData = [
+      { src: "./images/image1.gif", alt: "Cute animated Valentine proposal GIF with romantic theme" },
+      { src: "./images/image2.gif", alt: "Pleading Valentine GIF with emotional expression" },
+      { src: "./images/image3.gif", alt: "Cute begging Valentine GIF with puppy eyes" },
+      { src: "./images/image4.gif", alt: "Sad Valentine GIF with heartbroken expression" },
+      { src: "./images/image5.gif", alt: "Very sad Valentine GIF with tears" },
+      { src: "./images/image6.gif", alt: "Crying Valentine GIF with emotional sadness" },
+      { src: "./images/image7.gif", alt: "Celebration Valentine GIF with happy romantic theme" }
     ];
-  
-    noButton.addEventListener('click', function() {
+    
+    // Button text progression
+    const noButtonTexts = ["No", "Are you sure?", "Pookie please", "Don't do this to me :(", "You're breaking my heart", "I'm gonna cry..."];
+    
+    // Accessible no button click handler
+    const handleNoClick = function() {
       if (noClickCount < 5) {
         noClickCount++;
-        imageDisplay.src = imagePaths[noClickCount];
-        buttonHeight += 35; // Increase height by 5px on each click
+        
+        // Update image with proper alt text
+        imageDisplay.src = imageData[noClickCount].src;
+        imageDisplay.alt = imageData[noClickCount].alt;
+        
+        // Increase button size (responsive design)
+        buttonHeight += 35;
         buttonWidth += 35;
-        fontSize += 25; // Increase font size by 1px on each click
-        yesButton.style.height = `${buttonHeight}px`; // Update button height
+        fontSize += 3; // Reduced font increase for better mobile display
+        
+        // Apply responsive sizing
+        yesButton.style.height = `${buttonHeight}px`;
         yesButton.style.width = `${buttonWidth}px`;
-        yesButton.style.fontSize = `${fontSize}px`; // Update font size
-        if (noClickCount < 6) {
-          noButton.textContent = ["No", "Are you sure?", "Pookie please", "Don't do this to me :(", "You're breaking my heart", "I'm gonna cry..."][noClickCount];
+        yesButton.style.fontSize = `${fontSize}px`;
+        
+        // Update button text with screen reader announcement
+        if (noClickCount < noButtonTexts.length) {
+          const newText = noButtonTexts[noClickCount];
+          noButton.textContent = newText;
+          noButton.setAttribute('aria-label', `${newText} - Click to respond to Valentine proposal`);
+          
+          // Announce to screen readers
+          announceToScreenReader(`Changed response to: ${newText}`);
         }
+        
+        // Focus management for accessibility
+        yesButton.focus();
+      }
+    };
+    
+    // Accessible yes button click handler
+    const handleYesClick = function() {
+      // Update to celebration
+      imageDisplay.src = imageData[6].src;
+      imageDisplay.alt = imageData[6].alt;
+      valentineQuestion.textContent = "Yayyy!! :3";
+      responseButtons.style.display = 'none';
+      
+      // Announce success to screen readers
+      announceToScreenReader("Congratulations! You said yes to the Valentine proposal!");
+      
+      // Trigger confetti animation
+      confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 }
+      });
+    };
+    
+    // Screen reader announcement helper
+    const announceToScreenReader = function(message) {
+      const announcement = document.createElement('div');
+      announcement.setAttribute('role', 'status');
+      announcement.setAttribute('aria-live', 'polite');
+      announcement.className = 'sr-only';
+      announcement.textContent = message;
+      document.body.appendChild(announcement);
+      setTimeout(() => document.body.removeChild(announcement), 1000);
+    };
+    
+    // Event listeners
+    noButton.addEventListener('click', handleNoClick);
+    yesButton.addEventListener('click', handleYesClick);
+    
+    // Keyboard accessibility
+    noButton.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleNoClick();
       }
     });
-  
-    yesButton.addEventListener('click', () => {
-      imageDisplay.src = './images/image7.gif'; // Change to image7.gif
-      valentineQuestion.textContent = "Yayyy!! :3"; // Change the question text
-      responseButtons.style.display = 'none'; // Hide both buttons
-      confetti(); // Trigger confetti animation
+    
+    yesButton.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        handleYesClick();
+      }
     });
-  </script>  
+    
+    // Initialize accessibility
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set initial ARIA labels
+      noButton.setAttribute('aria-label', 'No - Click to respond to Valentine proposal');
+      yesButton.setAttribute('aria-label', 'Yes - Click to accept Valentine proposal');
+      
+      // Set initial focus for keyboard users
+      yesButton.focus();
+    });
+  </script>
 </body>
 </html>
