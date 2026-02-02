@@ -3,12 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>BeMyCharmm - Valentine's Day</title>
+  <title>Will You Be My Valentine? Proposal Website || BeMyCharmm || BeMyValentine</title>
+  <meta name="description" content="Cute and romantic Valentine's Day proposal website! Click 'No' and see what happens 😢. Will you be my Valentine – Yes or No? Try BeMyCharm's adorable proposal – completely free!">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Will You Be My Valentine? – Cutest Meme Prank 2024 💘" />
+  <meta property="og:description" content="Cute & funny Valentine meme. Click 'No' to see the magic 💌. Tag your crush, spread the love! #ValentinesDayIndia" />
+  <meta property="og:image" content="https://bemycharm.github.io/askherout/images/valentine_img.png" />
+  <meta property="og:url" content="https://bemycharm.github.io/askherout/" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Will You Be My Valentine? – Meme Proposal 💘" />
+  <meta name="twitter:description" content="Click 'No' and get a surprise. Try this cute Valentine's prank! Free, funny, and very desi." />
+  <meta name="twitter:image" content="https://bemycharm.github.io/askherout/images/valentine_img.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .gradient-background {
-      background: rgb(255, 208, 229);
-      background: linear-gradient(180deg, rgba(255, 208, 229, 1) 0%, rgba(255, 232, 242, 1) 36%, rgba(255, 255, 255, 1) 100%);
+      background: #FFB6C1;
+      background: linear-gradient(180deg, #FFB6C1 0%, rgba(255, 255, 255, 1) 100%);
     }
 
     .bounce2 {
@@ -31,15 +45,16 @@
 <body class="gradient-background">
   <div class="flex items-center justify-center h-screen">
     <div class="flex flex-col items-center p-4">
+      <h1 class="text-2xl font-bold text-[#BD1E59] mb-2 text-center">Will You Be My Valentine? Proposal Website by BeMyCharmm</h1>
       <img id="imageDisplay" src="./images/image1.gif" alt="Cute kitten with flowers" class="rounded-md h-[300px]" style="object-fit: cover;" />
       <h2 id="valentineQuestion" class="text-4xl font-bold italic text-[#bd1e59] my-4">Will you be my Valentine?</h2>
       <div class="flex gap-4 pt-[20px] items-center" id="responseButtons">
         <button id="yesButton"
-          class="bounce2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-green-400 min-h-12 min-w-[75px] px-4 py-2 bg-green-500 text-white transition">
+          class="bounce2 inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium disabled:pointer-events-none disabled:opacity-50 hover:bg-pink-400 min-h-12 min-w-[75px] px-4 py-2 bg-[#FF69B4] text-white transition">
           Yes
         </button>
         <button id="noButton"
-          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium transition disabled:pointer-events-none disabled:opacity-50 hover:bg-red-700 h-12 min-w-[75px] w-auto px-4 py-2 bg-red-500 text-white">
+          class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-[20px] font-medium transition disabled:pointer-events-none disabled:opacity-50 hover:bg-pink-600 h-12 min-w-[75px] w-auto px-4 py-2 bg-[#FF69B4] text-white">
           No
         </button>
       </div>
